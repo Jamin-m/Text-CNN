@@ -1,0 +1,1 @@
+The picture which record the model training process will be saved in this folder.

@@ -1,0 +1,1 @@
+The pre-trained word vector should be put in this folder.

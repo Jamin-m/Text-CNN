@@ -1,0 +1,1 @@
+The training model will be saved in this folder.
