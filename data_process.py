@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
-import os
 import re
 import jieba
 import logging
