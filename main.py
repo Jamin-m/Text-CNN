@@ -13,7 +13,6 @@ parser.add_argument('-dropout', type=float, default=0.5, help='Possibility of dr
 parser.add_argument('-embed_dim', type=int, default=128, help='Embedding dimension (default: 128)')
 parser.add_argument('-filter_dim', type=int, default=100, help='Number of filter (default: 100)')
 parser.add_argument('-filter_size', type=str, default='3,4,5', help='Filter size (default: "3,4,5")')
-parser.add_argument('-interval', type=int, default=5, help='Number of batch to wait before logging status (default: 5)')
 parser.add_argument('-class_num', type=int, default=3, help='Number of class (default: 3)')
 parser.add_argument('-pre_train_wv', type=bool, default=False,
                     help='Whether to use pre_trained word vector (default: False)')
@@ -23,6 +22,7 @@ parser.add_argument('-max_sen_len', type=int, default=40, help='Max length of se
 parser.add_argument('-device', type=int, default=-1, help='device used for training, -1 represents cpu (default: -1)')
 parser.add_argument('-split_rate', type=float, default=0.8, help='Rate of training data (default: 0.8)')
 parser.add_argument('-save_model', type=bool, default=True, help='Whether to save the model (default: True)')
+parser.add_argument('-interval', type=int, default=5, help='Number of batch to wait before logging status (default: 5)')
 args = parser.parse_args()
 
 print('Organizing dataset...')

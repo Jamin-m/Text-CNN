@@ -29,7 +29,8 @@ def train(iter_train, iter_validation, model, cuda, train_num, args):
             if i % args.interval == 0:
                 correct = (torch.max(predict, 1)[1].view(label.size()).data == label.data).sum()
                 acc = 100. * correct / batch.batch_size
-                print('Train epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}, accuracy: {:.6f}'.format(epoch, i * args.batch_size, train_num, 100. * i * args.batch_size / train_num, loss.item(), acc))
+                print('Train epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}, accuracy: {:.6f}'.format(epoch,
+                                                                                                 i * args.batch_size, train_num, 100. * i * args.batch_size / train_num, loss.item(), acc))
         Loss.append(loss.item())
         Acc.append(acc)
         val_loss, val_acc = eval(iter_validation, model, cuda)

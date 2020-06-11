@@ -54,7 +54,6 @@ def dataset_load(args):
 
     iter_train, iter_validation = data.Iterator.splits(
         (train, val),
-        device=args.device,
         batch_sizes=(args.batch_size, len(val)),
         sort_key=lambda x: len(x.Text),
     )
